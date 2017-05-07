@@ -13,6 +13,7 @@ import java.util.Map;
  * Created by Garik Kalashyan on 3/9/2017.
  */
 public enum ServiceInfo implements Serializable {
+
     SOSO_CLIENT_SERVICE(1,
             "http://localhost:8000/",
             new DBConnectionMetaData("org.postgresql.Driver",
@@ -45,7 +46,14 @@ public enum ServiceInfo implements Serializable {
     SERVICES_DETAIL_SERVICE(5,
             "http://localhost:9011/",
             null,
-            "soso_services_detail_service");
+            "soso_services_detail_service"),
+    SOSO_EVENT_LISTENER_SERVICE(6,
+            "http://localhost:3000/",
+            new DBConnectionMetaData("org.postgresql.Driver",
+                    "jdbc:postgresql://localhost:5432/soso-events-store-events-db",
+                    "postgres",
+                    "0944477522gar"),
+            "soso_event_listener_service");
 
 
     ServiceInfo(Integer serviceId, String serviceUrl, DBConnectionMetaData dbConnectionMetaData, String serviceUniqueName) {
