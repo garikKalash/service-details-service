@@ -97,7 +97,6 @@
                     <programs>
                         <program>
                             <mainClass>com.soso.ServicrdDetailServiceApplication</mainClass>
-                            <name>webapp</name>
                         </program>
                     </programs>
                 </configuration>

@@ -119,7 +119,7 @@ fi
 
 exec "$JAVACMD" $JAVA_OPTS  \
   -classpath "$CLASSPATH" \
-  -Dapp.name="webapp" \
+  -Dapp.name="servicrd-detail-service-application" \
   -Dapp.pid="$$" \
   -Dapp.repo="$REPO" \
   -Dapp.home="$BASEDIR" \
