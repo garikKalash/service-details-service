@@ -96,7 +96,7 @@
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>launch.Main</mainClass>
+                            <mainClass>com.soso.ServicrdDetailServiceApplication</mainClass>
                             <name>webapp</name>
                         </program>
                     </programs>
