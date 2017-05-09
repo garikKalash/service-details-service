@@ -1,9 +1,0 @@
-com\soso\persistance\exceptions\ServiceNotFoundException.class
-com\soso\web\WebConfig.class
-com\soso\controller\HomeDummyController.class
-com\soso\services\JsonMapBuilder.class
-com\soso\ServicrdDetailServiceApplication.class
-com\soso\services\JsonConverter.class
-com\soso\utilities\DBConnectionMetaData.class
-com\soso\persistance\ServiceInfo.class
-com\soso\controller\InfoRequestsController.class
