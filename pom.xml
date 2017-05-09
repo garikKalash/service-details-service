@@ -6,7 +6,6 @@
     <groupId>com.soso</groupId>
     <artifactId>soso-services-details</artifactId>
     <version>0.0.2</version>
-    <packaging>war</packaging>
 
     <name>com.soso-services-details</name>
     <description>Soso-services details</description>
