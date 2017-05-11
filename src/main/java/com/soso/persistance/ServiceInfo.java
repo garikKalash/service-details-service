@@ -15,11 +15,11 @@ import java.util.Map;
 public enum ServiceInfo implements Serializable {
 
     SOSO_CLIENT_SERVICE(1,
-            "http://localhost:8000/",
+            "http://soso-client.herokuapp.com/",
             new DBConnectionMetaData("org.postgresql.Driver",
-                    "jdbc:postgresql://localhost:5432/soso-client-service-db",
-                    "postgres",
-                    "0944477522gar"),
+                    "jdbc:postgres://cauzadlefscrvv:0463f0060b75d880792005e16b9d9a03f85c44cf84b0cac4d503d4b571f933b5@ec2-54-75-231-195.eu-west-1.compute.amazonaws.com:5432/d3kb9mi1sut2m8?sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&username=cauzadlefscrvv&password=0463f0060b75d880792005e16b9d9a03f85c44cf84b0cac4d503d4b571f933b5&characterEncoding=UTF-8&useUnicode=yes",
+                    "cauzadlefscrvv",
+                    "0463f0060b75d880792005e16b9d9a03f85c44cf84b0cac4d503d4b571f933b5"),
             "soso_client_service"),
 
     SOSO_PARTNER_SERVICE(2,
