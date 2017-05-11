@@ -23,24 +23,24 @@ public enum ServiceInfo implements Serializable {
             "soso_client_service"),
 
     SOSO_PARTNER_SERVICE(2,
-            "http://localhost:8081/",
+            "https://soso-partner.herokuapp.com/",
             new DBConnectionMetaData("org.postgresql.Driver",
-                    "jdbc:postgresql://localhost:5432/soso-partner-service-db",
-                    "postgres",
-                    "0944477522gar"),
+                    "jdbc:postgres://iwrfrdlugrxtfd:568e49d657f1e72020222cbc9637dce8e8545a4583afd82a398d415271ab7532@ec2-54-247-99-159.eu-west-1.compute.amazonaws.com:5432/dlu28gghspr52?sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&username=iwrfrdlugrxtfd&password=568e49d657f1e72020222cbc9637dce8e8545a4583afd82a398d415271ab7532&characterEncoding=UTF-8&useUnicode=yes",
+                    "iwrfrdlugrxtfd",
+                    "568e49d657f1e72020222cbc9637dce8e8545a4583afd82a398d415271ab7532"),
             "soso_partner_service"),
 
     AUTHENTICATION_SERVICE(3,
-            "http://localhost:8002/",
+            "http://soso-authentication-service.herokuapp.com/",
             null,
             "authentication_service"),
 
     COMMON_DATA_SERVICE(4,
-            "http://localhost:8001/",
+            "http://soso-common-data.herokuapp.com/",
             new DBConnectionMetaData("org.postgresql.Driver",
-                    "jdbc:postgresql://localhost:5432/soso-common-data-service-db",
-                    "postgres",
-                    "0944477522gar"),
+                    "jdbc:postgresql://ec2-79-125-2-69.eu-west-1.compute.amazonaws.com:5432/d5hactgbkc8b7g?sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory",
+                    "syngcfcvrdxvjf",
+                    "8333e72219c36b1597c4a30f4e8ce952ee175a115aac6ad436fa8345a677193e"),
             "soso_common_data_service"),
 
     SERVICES_DETAIL_SERVICE(5,
@@ -98,6 +98,6 @@ public enum ServiceInfo implements Serializable {
 
     private final Integer serviceId;
     private final String serviceUrl;
-    private final DBConnectionMetaData dbConnectionMetaData;
     private final String serviceUniqueName;
+    private final DBConnectionMetaData dbConnectionMetaData;
 }
