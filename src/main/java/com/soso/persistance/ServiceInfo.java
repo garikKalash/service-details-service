@@ -50,9 +50,9 @@ public enum ServiceInfo implements Serializable {
     SOSO_EVENT_LISTENER_SERVICE(6,
             "http://soso-event-service.herokuapp.com/",
             new DBConnectionMetaData("org.postgresql.Driver",
-                    "jdbc:postgresql://ec2-54-75-231-195.eu-west-1.compute.amazonaws.com/d3kb9mi1sut2m8?username=cauzadlefscrvv&sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory",
-                    "cauzadlefscrvv",
-                    "0463f0060b75d880792005e16b9d9a03f85c44cf84b0cac4d503d4b571f933b5"),
+                    "jdbc:postgresql://ec2-54-247-119-245.eu-west-1.compute.amazonaws.com:5432/d1uujjga8psd6q?username=ejhlnozhlshmok&sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory",
+                    "ejhlnozhlshmok",
+                    "123036f31e292231dcb8486b91c6b83ab9f2e04fdb48d19eada760f3f156f0f4"),
             "soso_event_listener_service");
 
 
