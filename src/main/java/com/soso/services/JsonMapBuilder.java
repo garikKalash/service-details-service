@@ -1,6 +1,8 @@
 package com.soso.services;
 
-import com.soso.persistance.ServiceInfo;
+import com.soso.persistance.ServiceDevelopmentInfo;
+import com.soso.persistance.ServiceProductionInfo;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,32 +13,46 @@ import java.util.Map;
 public class JsonMapBuilder {
     private static Map<String, Object> map = new HashMap<>();
 
-    public JsonMapBuilder() {
-    }
-
-    public JsonMapBuilder add(String key, ServiceInfo serviceInfo) {
-        map.put(key, getServiceDataAsMap(serviceInfo));
+    public JsonMapBuilder add(String key, ServiceProductionInfo serviceProductionInfo) {
+        map.put(key, getServiceDataAsMap(serviceProductionInfo));
         return this;
     }
 
-    public JsonMapBuilder add(String key, ServiceInfo[] serviceInfos) {
+
+    public JsonMapBuilder add(String key, ServiceDevelopmentInfo serviceDevelopmentInfo) {
+        map.put(key, getServiceDataAsMap(serviceDevelopmentInfo));
+        return this;
+    }
+
+    public JsonMapBuilder add(String key, ServiceProductionInfo[] serviceProductionInfos) {
         Map<String, Object> services = new HashMap<>();
-        for (ServiceInfo serviceInfo : serviceInfos) {
-            services.put(serviceInfo.toString(), getServiceDataAsMap(serviceInfo));
+        for (ServiceProductionInfo serviceProductionInfo : serviceProductionInfos) {
+            services.put(serviceProductionInfo.toString(), getServiceDataAsMap(serviceProductionInfo));
         }
-        map.put(key, serviceInfos);
+        map.put(key, serviceProductionInfos);
         return this;
     }
 
-    private Map<String, Object> getServiceDataAsMap(ServiceInfo serviceInfo) {
+    private Map<String, Object> getServiceDataAsMap(ServiceProductionInfo serviceProductionInfo) {
         Map<String, Object> serviceNode = new HashMap<>();
-        serviceNode.put("url", serviceInfo.getServiceUrl());
-        serviceNode.put("serviceUniqueName", serviceInfo.getServiceUniqueName());
-        serviceNode.put("dbConnectionMetaData", serviceInfo.getDbConnectionMetaData());
-        serviceNode.put("serviceId", serviceInfo.getServiceId());
+        serviceNode.put("url", serviceProductionInfo.getServiceUrl());
+        serviceNode.put("serviceUniqueName", serviceProductionInfo.getServiceUniqueName());
+        serviceNode.put("dbConnectionMetaData", serviceProductionInfo.getDbConnectionMetaData());
+        serviceNode.put("serviceId", serviceProductionInfo.getServiceId());
 
         return serviceNode;
     }
+
+    private Map<String, Object> getServiceDataAsMap(ServiceDevelopmentInfo serviceDevelopmentInfo) {
+        Map<String, Object> serviceDeevNode = new HashMap<>();
+        serviceDeevNode.put("url", serviceDevelopmentInfo.getServiceUrl());
+        serviceDeevNode.put("serviceUniqueName", serviceDevelopmentInfo.getServiceUniqueName());
+        serviceDeevNode.put("dbConnectionMetaData", serviceDevelopmentInfo.getDbConnectionMetaData());
+        serviceDeevNode.put("serviceId", serviceDevelopmentInfo.getServiceId());
+
+        return serviceDeevNode;
+    }
+
 
     public Map<String, Object> build() {
         return map;

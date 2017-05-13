@@ -1,7 +1,5 @@
 package com.soso.persistance;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.google.gson.annotations.SerializedName;
 import com.soso.persistance.exceptions.ServiceNotFoundException;
 import com.soso.utilities.DBConnectionMetaData;
 
@@ -12,7 +10,8 @@ import java.util.Map;
 /**
  * Created by Garik Kalashyan on 3/9/2017.
  */
-public enum ServiceInfo implements Serializable {
+public enum ServiceProductionInfo implements Serializable {
+
 
     SOSO_CLIENT_SERVICE(1,
             "http://soso-client.herokuapp.com/",
@@ -56,7 +55,7 @@ public enum ServiceInfo implements Serializable {
             "soso_event_listener_service");
 
 
-    ServiceInfo(Integer serviceId, String serviceUrl, DBConnectionMetaData dbConnectionMetaData, String serviceUniqueName) {
+    ServiceProductionInfo(Integer serviceId, String serviceUrl, DBConnectionMetaData dbConnectionMetaData, String serviceUniqueName) {
         this.serviceId = serviceId;
         this.serviceUrl = serviceUrl;
         this.dbConnectionMetaData = dbConnectionMetaData;
@@ -64,19 +63,19 @@ public enum ServiceInfo implements Serializable {
     }
 
 
-    private static Map<Integer, ServiceInfo> serviceInfoMap = new HashMap<>();
+    private static Map<Integer, ServiceProductionInfo> serviceInfoMap = new HashMap<>();
 
     static {
-        for (ServiceInfo serviceInfo : values()) {
-            serviceInfoMap.put(serviceInfo.getServiceId(), serviceInfo);
+        for (ServiceProductionInfo serviceProductionInfo : values()) {
+            serviceInfoMap.put(serviceProductionInfo.getServiceId(), serviceProductionInfo);
         }
     }
 
-    public static ServiceInfo getServiceInfoById(Integer serviceId) {
+    public static ServiceProductionInfo getServiceInfoById(Integer serviceId) {
         if (serviceInfoMap.get(serviceId) != null) {
             return serviceInfoMap.get(serviceId);
         }
-        throw new ServiceNotFoundException(ServiceInfo.class, "The requested Enum property Not Found with id: " + serviceId);
+        throw new ServiceNotFoundException(ServiceProductionInfo.class, "The requested Enum property Not Found with id: " + serviceId);
     }
 
 
