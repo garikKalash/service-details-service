@@ -21,9 +21,9 @@ public enum ServiceDevelopmentInfo implements Serializable {
     SOSO_PARTNER_SERVICE(2,
             "http://localhost:8081/",
             new DBConnectionMetaData("org.postgresql.Driver",
-                    "jdbc:postgresql://localhost:5432/soso-partner-service-db",
-                    "postgres",
-                    "0944477522gar"),
+                    "jdbc:postgresql://ec2-54-247-124-9.eu-west-1.compute.amazonaws.com/deros2lhhrsdig?username=qfwqixcffprnwa&sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory",
+                    "qfwqixcffprnwa",
+                    "beba59b4165d07a6889a33687d8698bf92838fa20e993ce213690c4e462d37cb"),
             "soso_partner_service"),
 
     AUTHENTICATION_SERVICE(3,
@@ -34,9 +34,9 @@ public enum ServiceDevelopmentInfo implements Serializable {
     COMMON_DATA_SERVICE(4,
             "http://localhost:8001/",
             new DBConnectionMetaData("org.postgresql.Driver",
-                    "jdbc:postgresql://localhost:5432/soso-common-data-service-db",
-                    "postgres",
-                    "0944477522gar"),
+                    "jdbc:postgresql://ec2-54-75-248-193.eu-west-1.compute.amazonaws.com/d7qa5oi0ajind8?username=ojjhzxiijfkiod&sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory",
+                    "ojjhzxiijfkiod",
+                    "5541e39b0753333da836b4fd344ab70484ff625c777671a5c7ac3a531a8f544b"),
             "soso_common_data_service"),
 
     SERVICES_DETAIL_SERVICE(5,
@@ -46,9 +46,9 @@ public enum ServiceDevelopmentInfo implements Serializable {
     SOSO_EVENT_LISTENER_SERVICE(6,
             "http://localhost:3000/",
             new DBConnectionMetaData("org.postgresql.Driver",
-                    "jdbc:postgresql://localhost:5432/soso-events-store-events-db",
-                    "postgres",
-                    "0944477522gar"),
+                    "jdbc:postgresql://ec2-176-34-242-58.eu-west-1.compute.amazonaws.com/de7dmo3hq3f5es?username=fyopuwvotsgxlf&sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory",
+                    "fyopuwvotsgxlf",
+                    "9cf5052addf3821b564d5c79f63a9f1dfba678db44fc22afbc3fc8102adef5a7"),
             "soso_event_listener_service");
 
     private static Map<Integer, ServiceDevelopmentInfo> serviceInfoMap = new HashMap<>();
